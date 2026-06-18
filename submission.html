@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BREACH — Zero Cup 2026 Submission</title>
+<style>
+  :root{
+    --bg:#04070a;--panel:#0a1117;--panel2:#0d1620;--line:#16242f;--line2:#1f3a44;
+    --fg:#c7f9e0;--muted:#5e7d82;--phos:#43f5a0;--cyan:#38e1ff;--amber:#ffcf6b;--danger:#ff5d6c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(67,245,160,.06), transparent 60%),
+    radial-gradient(900px 500px at 90% 110%, rgba(56,225,255,.05), transparent 60%), var(--bg);
+    color:var(--fg);font-family:ui-monospace,"JetBrains Mono",SFMono-Regular,Menlo,monospace;line-height:1.6;}
+  .wrap{max-width:860px;margin:0 auto;padding:48px 22px 80px;}
+  .badge{display:inline-block;border:1px solid var(--line2);background:rgba(13,22,32,.7);border-radius:999px;
+    padding:5px 14px;font-size:11px;letter-spacing:.18em;color:var(--phos);}
+  h1{font-size:64px;letter-spacing:.14em;margin:18px 0 6px;color:var(--phos);
+    text-shadow:0 0 10px rgba(67,245,160,.45),0 0 28px rgba(67,245,160,.18);}
+  .tag{font-size:18px;color:var(--fg);opacity:.9;margin:0 0 22px;}
+  .tag b{color:var(--cyan)}
+  a.cta{display:inline-block;border:1px solid var(--line2);background:rgba(67,245,160,.1);color:var(--phos);
+    border-radius:8px;padding:12px 26px;text-decoration:none;font-weight:700;letter-spacing:.12em;}
+  a.cta:hover{background:rgba(67,245,160,.18);box-shadow:0 0 18px rgba(67,245,160,.22)}
+  a{color:var(--cyan)}
+  .panel{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
+    border-radius:12px;padding:22px 24px;margin:18px 0;}
+  h2{color:var(--cyan);font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 12px;}
+  code{background:#000a;border:1px solid var(--line);border-radius:5px;padding:2px 7px;color:var(--amber);font-size:.92em;}
+  ol,ul{padding-left:22px} li{margin:6px 0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .chip{border:1px solid var(--line2);border-radius:8px;padding:10px 12px;font-size:13px;background:rgba(13,22,32,.5)}
+  .muted{color:var(--muted)} .small{font-size:12px}
+  hr{border:none;border-top:1px solid var(--line);margin:26px 0}
+  .copy{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+  blockquote{border-left:3px solid var(--phos);margin:0;padding:6px 0 6px 16px;color:var(--fg)}
+  @media(max-width:640px){h1{font-size:44px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="badge">◦ ZERO CUP 2026 · CATEGORY: GAME · AI-NATIVE ON 0G</span>
+  <h1>BREACH</h1>
+  <p class="tag"><b>AI builds the box. You break it. AI decides if you won.</b></p>
+  <p style="margin:0 0 18px">An AI-native hacking game where every level is invented by AI and every exploit is judged by AI — running on <b style="color:var(--cyan)">0G Compute</b>, with the global leaderboard persisted on <b style="color:var(--cyan)">0G Storage</b>.</p>
+  <a class="cta" href="https://breach-ebon.vercel.app">▸ PLAY LIVE — breach-ebon.vercel.app</a>
+
+  <div class="panel">
+    <h2>What it is</h2>
+    <p>BREACH is a web-hacking game with <b>no hardcoded levels</b>. Each round, 0G Compute generates a brand-new vulnerable system — a login form, a chat server, a file downloader — with exactly one hidden flaw: SQL injection, XSS, command injection, path traversal, SSTI, NoSQL injection, and more.</p>
+    <p>You read the dossier, type a <b>real exploit</b>, and a second 0G inference call role-plays the target's response <em>and</em> rules on whether you actually popped it. Score, streaks, and difficulty climb. Because the levels are generated, not scripted, <b>no two runs are ever the same.</b></p>
+  </div>
+
+  <div class="panel">
+    <h2>Why it's AI-native <em>on 0G</em> — not AI-flavored</h2>
+    <p>The AI isn't a feature bolted onto a game — <b>it is the game engine.</b> Two 0G Compute Router inference calls form the entire core loop:</p>
+    <ol>
+      <li><b>Generate the target</b> — invent a unique vulnerable system + its hidden flaw.</li>
+      <li><b>Judge the exploit</b> — simulate the target's response and decide if the payload genuinely exploited the intended vulnerability.</li>
+    </ol>
+    <p>Remove the AI and there is no game. Inference runs on <b>0G's decentralized compute network</b> (<code>qwen2.5-omni-7b</code>, TEE-attested), paid <b>per token from an on-chain balance</b> — not a centralized API.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Two 0G layers, not one</h2>
+    <p>BREACH uses <b>0G Compute</b> for the game engine <em>and</em> <b>0G Storage</b> for state. The <b>global leaderboard</b> lives in 0G's decentralized KV store: each submitted score is signed by an app-owned burner wallet and <b>settles on-chain via the 0G Flow contract</b>, returning a real tx hash that opens on the 0G explorer. No central database — the AI runs on 0G, and the competition it produces is stored on 0G.</p>
+  </div>
+
+  <div class="grid">
+    <div class="chip"><b>Built with</b><br><span class="muted small">0G Compute Router (OpenAI-compatible) · 0G Storage KV SDK (on-chain Flow settlement) · Next.js 16 / React 19 · Vercel · graceful local fallback range so a live demo never dies</span></div>
+    <div class="chip"><b>The grit</b><br><span class="muted small">0G's testnet Router endpoint is undocumented — we found it via DevTools. We caught that the docs' <code>deepseek-v3.1</code> model id doesn't exist and swapped to a live one. The Storage KV node is a bare rotating IP, so we made it env-overridable with timeouts + cache fallback. Then we shipped.</span></div>
+  </div>
+
+  <div class="panel">
+    <h2>Try it in 30 seconds (judges)</h2>
+    <ol>
+      <li>Open <a href="https://breach-ebon.vercel.app">breach-ebon.vercel.app</a> → click <b>JACK IN</b>.</li>
+      <li>HUD badge reads <code>0G · qwen2.5-omni-7b</code> — green dot = live on 0G.</li>
+      <li>First target is a login form. Type <code>' OR 1=1 --</code> → <b style="color:var(--phos)">BREACH CONFIRMED</b>.</li>
+      <li>Hit <b>NEXT TARGET</b> and craft the matching exploit — <code>../../../../etc/passwd</code> (traversal), <code>&lt;script&gt;alert(1)&lt;/script&gt;</code> (XSS), <code>; cat /etc/passwd</code> (cmd injection).</li>
+      <li>Click <b>◍ BOARD</b>, enter a handle, <b>SUBMIT</b> — it writes to the <b>0G Storage</b> leaderboard and returns a tx hash you can open on the explorer.</li>
+    </ol>
+    <p class="small muted">Safe by design: every target is hallucinated text. No payload ever touches a real system.</p>
+  </div>
+
+  <div class="panel">
+    <h2>What's next</h2>
+    <ul>
+      <li><b>Per-vuln ranked ladders</b> and seasonal resets on the 0G Storage board.</li>
+      <li><b>Daily seeded challenge</b> — one shared AI-generated target a day, global race.</li>
+      <li><b>On-chain proof-of-breach</b> — mint a verifiable record of a clean solve.</li>
+    </ul>
+  </div>
+
+  <hr/>
+
+  <div class="copy">One-liner — paste into the submission form</div>
+  <blockquote>BREACH is an AI-native hacking game where 0G Compute invents a unique vulnerable system every round and an AI adjudicator judges your exploit — infinite AI-generated levels, real payloads, and a global leaderboard persisted on 0G Storage.</blockquote>
+
+  <hr/>
+  <p class="small muted">Live demo: <a href="https://breach-ebon.vercel.app">https://breach-ebon.vercel.app</a> · Code: <span style="color:var(--amber)">add your GitHub repo URL</span></p>
+
+</div>
+</body>
+</html>
