@@ -2,12 +2,19 @@
 
 **An AI-native hacking game — built on 0G.**
 
+[![Play live](https://img.shields.io/badge/▸_play-breach--ebon.vercel.app-43f5a0?style=flat-square)](https://breach-ebon.vercel.app)
+[![Built on 0G](https://img.shields.io/badge/built_on-0G_Compute_+_Storage-38e1ff?style=flat-square)](https://0g.ai)
+[![Next.js 16](https://img.shields.io/badge/Next.js-16-000?style=flat-square&logo=nextdotjs)](https://nextjs.org)
+[![Zero Cup 2026](https://img.shields.io/badge/Zero_Cup-2026-ffcf6b?style=flat-square)](https://0g.ai)
+
 Every target is a vulnerable system *invented by AI*. Every exploit you type is
 *judged by AI*. Both the generator and the adjudicator run on **0G Compute**,
 0G's decentralized inference network — not a centralized API. Remove the AI and
 there is no game: that's what makes BREACH AI-native rather than AI-flavored.
 
 > Built for the 0G Labs **Zero Cup 2026** Vibe Coding Tournament.
+
+![BREACH — a live AI-generated target on 0G Compute, with the green `0G · qwen2.5-omni-7b` badge in the HUD](public/screenshot.png)
 
 ---
 
