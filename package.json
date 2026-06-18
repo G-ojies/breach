@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@0gfoundation/0g-storage-ts-sdk": "^1.2.10",
-    "ethers": "^6.17.0",
+    "ethers": "6.13.1",
     "next": "16.2.9",
     "openai": "^6.43.0",
     "react": "19.2.4",
